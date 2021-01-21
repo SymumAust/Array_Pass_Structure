@@ -6,46 +6,5 @@ int Speed1 = 0;
 int Speed2=0;
 struct GraphicsCard{
         char Brand[20];
-        char Model[20];
-        int Price;
-        int RAM;
-        int Speed;
-};
-int find_speed_difference(struct GraphicsCard *arr, int n);
-int main()
-{
-    struct GraphicsCard arr[100];
 
-    int n;
-    cout<<"Enter how many product: ";
-    cin>> n;
-    int x = find_speed_difference(arr, n);
-    cout<<"The Difference is: "<<x<<endl;
-}
-int find_speed_difference(struct GraphicsCard *arr, int n){
-    for(int i=0;i<n;i++){
-
-    cout<<"Brand Name: ";
-    cin>> arr[i].Brand;
-    cout<<"Model Name: ";
-    cin>> arr[i].Model;
-    cout<<"Price: ";
-    cin>> arr[i].Price;
-    cout<<"Ram: ";
-    cin>> arr[i].RAM;
-    cout<<"Speed: ";
-    cin>> arr[i].Speed;
-    cout<< endl;
-
-    if(arr[i].Price>=MaxPrice)
-    {
-        MaxPrice= arr[i].Price;
-        Speed1 = arr[i].Speed;
-    }
-    if(arr[i].RAM<=MinRam){
-        MinRam= arr[i].RAM;
-         Speed2 = arr[i].Speed;
-    }
-    }
-    return abs(Speed2-Speed1);
 }
