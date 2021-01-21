@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct Footballer
+{
+    char Name[20];
+    int Age;
+    int Goals;
+    int Matches;
+    char Club[10];
+    char Position[15];
+};
+
+int find_total_goals(struct Footballer *arr, char* position);
+struct Footballer arrTemp;
+struct Footballer arr[100];
+
+int main()
+{
+
+
+    cout<< "Enter Position: ";
+    cin>> arrTemp.Position;
+    cout<<endl;
+    int goal = find_total_goals(arr, arrTemp.Position);
+    cout<< "Total Goals: "<<goal<<endl;
+    cout<< "Position: "<<arrTemp.Position<<endl;
+
+
+}
+int find_total_goals(struct Footballer *arr, char* position)
+{
+    int TotalGoals=0;
+    for(int i=0;i<11;i++){
+    cout<<"Enter Name: ";
+    cin>> arr[i].Name;
+    cout<<"Enter Age: ";
+    cin>> arr[i].Age;
+    cout<<"Goals: ";
+    cin>> arr[i].Goals;
+    cout<<"Enter Matches: ";
+    cin>> arr[i].Matches;
+    cout<<"Enter Club: ";
+    cin>> arr[i].Club;
+    cout<<"Enter Position: ";
+    cin>>arr[i].Position;
+    if((strcmp(position,arr[i].Position)==0)){
+         TotalGoals = arr[i].Goals + TotalGoals;
+    }
+    cout<< endl;
+    }
+
+    return TotalGoals;
+}
